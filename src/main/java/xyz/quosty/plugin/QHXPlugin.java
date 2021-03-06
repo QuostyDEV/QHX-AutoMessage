@@ -10,6 +10,8 @@ public class QHXPlugin extends JavaPlugin
     @Override
     public void onLoad() {
 
+        saveDefaultConfig();
+       
         DataPlugin dataPlugin = new DataPlugin();
         dataPlugin.load();
 
