@@ -14,11 +14,7 @@ public class DataPlugin
     }
 
     public void load() {
-
-        (this.plugin = (QHXPlugin) QHXPlugin.getPlugin((Class)QHXPlugin.class)).saveDefaultConfig();
-
         FileConfiguration configuration = this.plugin.getConfig();
-
         this.config.autoMessages = configuration.getStringList("autoMessages");
     }
 }
