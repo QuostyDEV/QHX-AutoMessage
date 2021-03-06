@@ -17,7 +17,7 @@ public class AutoMsgRunnable implements Runnable
 
         config = Config.getInstance();
 
-        Bukkit.getScheduler().runTaskTimerAsynchronously(plugin, this, 20L, 100L);
+        Bukkit.getScheduler().runTaskTimerAsynchronously(plugin, this, 20L, 600L);
 
     }
 
