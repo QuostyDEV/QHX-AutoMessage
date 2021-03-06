@@ -7,32 +7,25 @@ import xyz.quosty.plugin.QHXPlugin;
 import xyz.quosty.plugin.data.Config;
 import xyz.quosty.plugin.util.ChatUtil;
 
-public class AutoMsgRunnable implements Runnable
-{
+public class AutoMsgRunnable implements Runnable {
 
     private Config config;
     private int index;
 
     public AutoMsgRunnable(QHXPlugin plugin) {
-
         config = Config.getInstance();
-
         Bukkit.getScheduler().runTaskTimerAsynchronously(plugin, this, 20L, 600L);
-
     }
 
     @Override
     public void run() {
 
         if(index >= config.autoMessages.size()){
-
             index = 0;
         }
 
         for(Player p : Bukkit.getOnlinePlayers()){
-
             p.sendMessage(ChatUtil.colored(config.autoMessages.get(index)));
-
         }
         ++index;
     }
